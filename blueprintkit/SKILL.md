@@ -18,11 +18,13 @@ Provides a complete system for planning, executing, and delivering technical pro
 
 ## Installation
 
-Install BlueprintKit using the skills.sh CLI:
+Install BlueprintKit from the JustineDevs collection using the skills.sh CLI:
 
 ```bash
-npx skills add JustineDevs/blueprintkit
+npx skills add justinedevs/collection/blueprintkit
 ```
+
+**Note:** This installs only the BlueprintKit skill from the collection. Other skills in the collection can be installed separately as needed.
 
 ### What Gets Installed Automatically
 
@@ -61,5 +63,5 @@ For complete documentation, see [.claude/skills/blueprintkit/SKILL.md](.claude/s
 
 ## License
 
-MIT License - See [LICENSE](./LICENSE) file for details.
+MIT License - See [LICENSE](../LICENSE) file for details.
 
