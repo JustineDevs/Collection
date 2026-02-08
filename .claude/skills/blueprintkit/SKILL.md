@@ -654,7 +654,7 @@ This skill references the following project structure:
 Install BlueprintKit using the skills.sh CLI:
 
 ```bash
-npx skills add JustineDevs/BlueprintKit
+npx skills add JustineDevs/blueprintkit
 ```
 
 ### What Gets Installed Automatically

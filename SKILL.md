@@ -21,7 +21,7 @@ Provides a complete system for planning, executing, and delivering technical pro
 Install BlueprintKit using the skills.sh CLI:
 
 ```bash
-npx skills add JustineDevs/skills-collection
+npx skills add JustineDevs/blueprintkit
 ```
 
 ### What Gets Installed Automatically
