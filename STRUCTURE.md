@@ -43,6 +43,16 @@ collection/
 │       ├── plugin.mdc
 │       ├── marketplace.json
 │       └── README.md
+├── erc8004-agent-creator/              # ERC-8004 / 8004 agent scaffold skill
+│   ├── SKILL.md                        # Skill definition (create-8004-agent wrapper)
+│   ├── .claude-plugin/
+│   │   └── marketplace.json            # Claude marketplace listing
+│   ├── scripts/
+│   │   └── patch_anthropic.py           # Patch generated project to use Claude (Python)
+│   ├── references/
+│   │   └── wizard-options.md           # Wizard order and chain/feature reference
+│   └── assets/
+│       └── agent-anthropic.ts           # Anthropic agent template
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
 └── STRUCTURE.md                        # This file
