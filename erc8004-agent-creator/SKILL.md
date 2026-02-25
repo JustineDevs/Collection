@@ -10,7 +10,15 @@ This skill provides usage, installation, and workflow guidance for [create-8004-
 
 ## Overview
 
-create-8004-agent is a CLI. No package install; run `npx create-8004-agent` once from any directory. The wizard prompts for project directory, agent name, description, image URL, chain, wallet (or leave empty to generate), features (A2A, MCP, x402), A2A streaming, and trust models. Node.js 18+ and npm/pnpm/bun required.
+create-8004-agent is a CLI. No package install; run it once from any directory. The wizard prompts for project directory, agent name, description, image URL, chain, wallet (or leave empty to generate), features (A2A, MCP, x402), A2A streaming, and trust models. Node.js 18+ and npm/pnpm/bun required.
+
+```bash
+# Run the CLI (pin version when available for supply-chain safety)
+npx create-8004-agent
+# Or: npx create-8004-agent@<version>
+```
+
+**Security and trust:** This skill is documentation only; it does not execute commands or move funds. Users run `npx create-8004-agent` and any optional patch script themselves. Before running: (1) Verify the CLI source (official repo: [Eversmile12/create-8004-agent](https://github.com/Eversmile12/create-8004-agent)); (2) Prefer a pinned version when available, e.g. `npx create-8004-agent@<version>`; (3) Inspect `scripts/patch_anthropic.py` before use (it only writes under the project dir you pass; no path traversal); (4) Keep `.env` out of version control and use a secrets manager in production. See [SECURITY.md](SECURITY.md) for details.
 
 ## Wizard Options (Summary)
 
@@ -42,7 +50,7 @@ For full wizard order and chain/feature matrix, see [references/wizard-options.m
 
 ## Optional: Customize LLM Provider
 
-The generated project uses OpenAI in `src/agent.ts`. To switch to another LLM (e.g. Anthropic Claude), use the optional script: `python scripts/patch_anthropic.py <projectDir>`, then add `@anthropic-ai/sdk` in the project. See references for wizard details; the patch is optional.
+The generated project uses OpenAI in `src/agent.ts`. To switch to another LLM (e.g. Anthropic Claude), use the optional script: `python scripts/patch_anthropic.py <projectDir>` (projectDir must be a single path segment under the current directory; the script rejects `..` and path traversal). Then add `@anthropic-ai/sdk` in the project. Do not commit `.env`; it may contain API keys. See references for wizard details; the patch is optional.
 
 ## Resources
 
