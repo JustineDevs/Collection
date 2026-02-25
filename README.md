@@ -7,7 +7,7 @@ A collection of AI agent skills for project development and execution.
 | Bash | Skills (URL) | Description |
 |------|--------------|-------------|
 | `npx skills add justinedevs/collection/blueprintkit` | [justinedevs/collection/blueprintkit](https://skills.sh/justinedevs/collection/blueprintkit) | Complete project planning and execution framework: 14 planning sections plus 9 specialized execution capabilities, from initial vision through deployment and continuous improvement. |
-| `npx skills add justinedevs/collection/erc8004-agent-creator` | [justinedevs/collection/erc8004-agent-creator](https://skills.sh/justinedevs/collection/erc8004-agent-creator) | Scaffolds ERC-8004 and 8004 AI agents (EVM and Solana) with A2A, MCP, and x402 via [create-8004-agent](https://github.com/Eversmile12/create-8004-agent). Choose chain, features, and optionally patch to Anthropic Claude (Python script included). |
+| `npx skills add justinedevs/collection/erc8004-agent-creator` | [justinedevs/collection/erc8004-agent-creator](https://skills.sh/justinedevs/collection/erc8004-agent-creator) | Usage and installation for [create-8004-agent](https://github.com/Eversmile12/create-8004-agent): how to create ERC-8004/8004 agents, wizard options, chains (EVM and Solana), and post-generation steps. Optional script to switch generated project to Anthropic Claude. |
 
 Each skill is installed independently - you only download what you need.
 
@@ -22,7 +22,7 @@ This repository uses a monorepo structure where multiple skills can coexist. Whe
 **Example usage in your workspace (prompts):**
 
 - **BlueprintKit:** After installing, ask your agent: *"Create a project plan using BlueprintKit: scope, timeline, and risk section"* or *"Run the tech-stack selector and suggest a stack for a real-time dashboard."*
-- **erc8004-agent-creator:** After installing, ask: *"Create an ERC-8004 agent on Base Sepolia with A2A and MCP, no x402, using Claude"* or *"Scaffold an 8004 agent for Solana Devnet with A2A only."* The skill runs the generator and can patch the project to use Anthropic.
+- **erc8004-agent-creator:** After installing, ask: *"How do I create an ERC-8004 agent?"* or *"What options does the create-8004-agent wizard have?"* or *"How do I register my agent and start the A2A server?"* The skill explains installation (`npx create-8004-agent`), wizard options, chains, and usage after generation.
 
 **Result URL:** `https://skills.sh/justinedevs/collection/`
 
