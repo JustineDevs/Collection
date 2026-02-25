@@ -1,78 +1,61 @@
 ---
 name: erc8004-agent-creator
-description: Scaffolds ERC-8004 and 8004 AI agents (EVM and Solana) with A2A, MCP, and x402 using create-8004-agent. Use when the user wants to create an 8004/ERC-8004 agent, choose chain (e.g. Base Sepolia, Ethereum Sepolia, Polygon Amoy, Solana Devnet), features (A2A, MCP, x402), and optionally LLM provider (OpenAI or Anthropic/Claude). Handles running the generator and patching agent.ts for Claude when requested.
+description: Usage and installation for create-8004-agent (ERC-8004 / 8004 AI agent scaffold). Use when the user asks how to create an ERC-8004 or 8004 agent, how to install or run create-8004-agent, what wizard options mean, which chains are supported, what gets generated, or how to configure and register the generated project (env, npm run register, start:a2a, start:mcp). Covers EVM (Ethereum, Base, Polygon, Monad) and Solana.
+license: See repository LICENSE
 ---
 
-# ERC-8004 Agent Creator
+# erc8004-agent-creator
+
+This skill provides usage, installation, and workflow guidance for [create-8004-agent](https://github.com/Eversmile12/create-8004-agent), the CLI that scaffolds ERC-8004 (EVM) and 8004 (Solana) AI agents with optional A2A, MCP, and x402.
 
 ## Overview
 
-This skill scaffolds production-ready ERC-8004 (EVM) or 8004 (Solana) agents using the [create-8004-agent](https://github.com/Eversmile12/create-8004-agent) CLI. It generates a project with optional A2A server, MCP server, and x402 payments, and can patch the default OpenAI agent to use Anthropic Claude instead.
+create-8004-agent is a CLI. No package install; run `npx create-8004-agent` once from any directory. The wizard prompts for project directory, agent name, description, image URL, chain, wallet (or leave empty to generate), features (A2A, MCP, x402), A2A streaming, and trust models. Node.js 18+ and npm/pnpm/bun required.
 
-## When to Use
+## Wizard Options (Summary)
 
-- User asks to create an ERC-8004 or 8004 agent, or to scaffold an AI agent for Base Sepolia, Ethereum Sepolia, Polygon Amoy, Monad, or Solana Devnet.
-- User specifies chain, features (A2A, MCP, x402), and optionally "using Claude" or "with Anthropic."
+| Option | Description |
+|--------|-------------|
+| Project directory | Where to create the project (default `my-agent`) |
+| Agent name / description / image | Metadata for the agent |
+| Chain | EVM: eth-sepolia, base-sepolia, polygon-amoy, monad-testnet (+ mainnets). Solana: solana-devnet |
+| Agent wallet | EVM or Solana address; leave empty to auto-generate |
+| Features | A2A server, MCP server, x402 (x402 only on Base/Polygon) |
+| A2A streaming | SSE for streaming responses (when A2A enabled) |
+| Trust models | reputation, crypto-economic, tee-attestation |
 
-## Inferred Parameters
+For full wizard order and chain/feature matrix, see [references/wizard-options.md](references/wizard-options.md).
 
-From the user's request, infer or ask for:
+## What Gets Generated
 
-| Parameter | Type | Notes |
-|-----------|------|--------|
-| `projectDir` | string | Project directory name (e.g. `my-agent`). Default `my-agent`. |
-| `agentName` | string | Display name of the agent. |
-| `agentDescription` | string | Short description of what the agent does. |
-| `chain` | enum | One of: `eth-sepolia`, `base-sepolia`, `polygon-amoy`, `monad-testnet`, `solana-devnet` (and mainnets if needed). |
-| `features` | list | Subset of `a2a`, `mcp`, `x402`. x402 only on Base/Polygon (not Ethereum, Monad). |
-| `a2aStreaming` | boolean | Enable A2A SSE streaming. Default false. Only if A2A enabled. |
-| `llm_provider` | enum | `openai` (default) or `anthropic`. If user says "Claude" or "Anthropic", use `anthropic`. |
-| `agentWallet` | string | Optional. Leave empty to let the wizard generate a new wallet. |
+- `package.json`, `tsconfig.json`, `.env` (with generated key if wallet empty)
+- `src/register.ts`, `src/agent.ts` (LLM: OpenAI by default)
+- Optional: `src/a2a-server.ts`, `src/a2a-client.ts`, `.well-known/agent-card.json` (if A2A); `src/mcp-server.ts`, `src/tools.ts` (if MCP)
 
-See [references/wizard-options.md](references/wizard-options.md) for full wizard order and chain/feature matrix.
+## Usage After Generation
 
-## Execution Steps
+1. **Configure** – `cd <projectDir>`, edit `.env`: `PRIVATE_KEY` (or use generated), `OPENAI_API_KEY`, `PINATA_JWT` (pinata.cloud, pinJSONToIPFS scope). Back up `.env` if wallet was generated.
+2. **Fund wallet** – Testnet ETH (Sepolia, Base Sepolia, etc.) or Solana Devnet SOL.
+3. **Register on-chain** – `npm run register` (uploads metadata to IPFS, mints Identity Registry NFT). View on [8004scan.io](https://www.8004scan.io/).
+4. **Start servers** – If A2A: `npm run start:a2a` (then set public URL in registration and run `npm run register` again if needed). If MCP: `npm run start:mcp`.
+5. **Update agent** – Edit `src/register.ts` for name/description/image/skills, then run `npm run register` again.
 
-1. **Prerequisites**
-   - Ensure Node.js 18+ and npm/pnpm/bun are available.
-   - User must have (or generate) a wallet; the CLI can generate one if wallet is left empty.
+## Optional: Customize LLM Provider
 
-2. **Run the generator**
-   - Run: `npx create-8004-agent`
-   - The wizard will prompt for: project directory, agent name, description, image URL, chain, wallet, features (A2A, MCP, x402), A2A streaming, trust models.
-   - Either guide the user to answer the prompts, or run the CLI and provide answers in the same order as the wizard (projectDir, agentName, agentDescription, agentImage, chain, agentWallet, features, a2aStreaming, trustModels).
-
-3. **Patch for Anthropic (if requested)**
-   - If the user asked for Claude/Anthropic, after the project is generated run the skill's patch script so the agent uses Anthropic instead of OpenAI:
-     - From the workspace root: `python erc8004-agent-creator/scripts/patch_anthropic.py <projectDir>`
-     - Or from the skill directory: `python scripts/patch_anthropic.py <projectDir>`
-   - The script overwrites `src/agent.ts` with the Anthropic template and appends `ANTHROPIC_API_KEY` to `.env`. Ensure the project's `package.json` includes `@anthropic-ai/sdk` (the script does not install it; add it manually or document for the user: `npm install @anthropic-ai/sdk`).
-
-4. **Return next steps**
-   - Tell the user:
-     - `cd <projectDir>`
-     - Configure `.env`: add `OPENAI_API_KEY` (or `ANTHROPIC_API_KEY` if patched), `PINATA_JWT`; if a wallet was generated, back up `.env`.
-     - Fund the wallet (testnet ETH or devnet SOL per chain).
-     - If A2A: run `npm run start:a2a`, then update registration with the public URL, then run `npm run register`.
-     - If MCP: run `npm run start:mcp`.
-     - Register on-chain: `npm run register`.
+The generated project uses OpenAI in `src/agent.ts`. To switch to another LLM (e.g. Anthropic Claude), use the optional script: `python scripts/patch_anthropic.py <projectDir>`, then add `@anthropic-ai/sdk` in the project. See references for wizard details; the patch is optional.
 
 ## Resources
 
-### scripts/patch_anthropic.py
+This skill follows the same structure as the skill-creator reference: optional bundled resources below.
 
-Overwrites `src/agent.ts` in the given project directory with an Anthropic Claude implementation and appends `ANTHROPIC_API_KEY=` to `.env`. Usage:
+### references/
 
-```bash
-python scripts/patch_anthropic.py <projectDir>
-```
+- **wizard-options.md** – Wizard prompt order, chain keys, x402 availability. Read when mapping user choices to wizard answers or explaining chains/features.
 
-Example: `python scripts/patch_anthropic.py my-agent`
+### scripts/
 
-### references/wizard-options.md
+- **patch_anthropic.py** – Optional: patches a generated project’s `src/agent.ts` and `.env` for Anthropic. Usage: `python scripts/patch_anthropic.py <projectDir>`.
 
-Wizard prompt order, chain keys, and feature availability (including x402 support per chain). Read when you need to map user intent to exact wizard answers or to automate piping.
+### assets/
 
-### assets/agent-anthropic.ts
-
-Template source for the Anthropic agent used by `patch_anthropic.py`. You can read it to understand the patched agent shape or to customize the script.
+- **agent-anthropic.ts** – Template used by the patch script.
