@@ -1,0 +1,16 @@
+{
+  "name": "publish-workspace-version",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "commit": "bash scripts/parallel-commit.sh",
+    "commit:dry": "bash scripts/parallel-commit.sh --dry-run",
+    "commit:sh": "bash scripts/parallel-commit.sh",
+    "commit:sh:dry": "bash scripts/parallel-commit.sh --dry-run",
+    "commit:all": "bash -c 'cd \"$(git rev-parse --show-toplevel)\" && git add -A && git commit -m \"chore: update project files\"'",
+    "commit:auto": "bash scripts/parallel-commit.sh --max 3",
+    "status": "git status",
+    "changes": "git status --porcelain",
+    "staged": "git diff --cached --name-only"
+  }
+}
