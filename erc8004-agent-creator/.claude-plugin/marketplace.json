@@ -1,20 +1,19 @@
 {
-  "name": "erc8004-agent-creator-plugin",
+  "name": "erc8004-agent-creator",
   "owner": {
     "name": "JustineDevs",
-    "email": ""
+    "email": "tradergofficial@gmail.com"
   },
   "metadata": {
-    "description": "Scaffolds ERC-8004 and 8004 AI agents (EVM and Solana) with A2A, MCP, and x402 using create-8004-agent. Supports OpenAI or Anthropic Claude. Use when creating trustless AI agents for Base Sepolia, Ethereum Sepolia, Polygon Amoy, Monad, or Solana Devnet.",
-    "version": "1.0.0"
+    "description": "Usage and installation for create-8004-agent: how to create ERC-8004/8004 AI agents, wizard options, supported chains (EVM and Solana), and post-generation steps (configure, register, start A2A/MCP). Optional script to switch generated project to Anthropic Claude.",
+    "pluginRoot": "."
   },
   "plugins": [
     {
       "name": "erc8004-agent-creator",
-      "description": "Scaffolds ERC-8004 and 8004 AI agents with A2A, MCP, and x402 using create-8004-agent. Use when the user wants to create an 8004/ERC-8004 agent, choose chain (e.g. Base Sepolia), features (A2A, MCP, x402), and optionally LLM provider (OpenAI or Anthropic/Claude). Includes Python patch script to switch generated project to Claude.",
-      "source": "./",
-      "strict": false,
-      "skills": ["."]
+      "source": ".",
+      "description": "Usage and installation for create-8004-agent (ERC-8004 / 8004 scaffold). Use when the user asks how to create an ERC-8004 or 8004 agent, how to install or run create-8004-agent, wizard options, chains, or how to configure and register the generated project.",
+      "category": "AI Agents"
     }
   ]
 }
