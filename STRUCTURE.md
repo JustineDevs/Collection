@@ -53,6 +53,10 @@ collection/
 │   │   └── wizard-options.md           # Wizard order and chain/feature reference
 │   └── assets/
 │       └── agent-anthropic.ts           # Anthropic agent template
+├── core-engineering/                    # Core Engineering / OOP & SOLID skill
+│   ├── SKILL.md                         # OOP, SOLID, clean code, relationship types + examples
+│   └── .claude-plugin/
+│       └── marketplace.json             # Claude marketplace listing
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
 └── STRUCTURE.md                        # This file
