@@ -8,6 +8,7 @@ A collection of AI agent skills for project development and execution.
 |------|--------------|-------------|
 | `npx skills add https://github.com/justinedevs/collection --skill blueprintkit` | [justinedevs/collection/blueprintkit](https://skills.sh/justinedevs/collection/blueprintkit) | Complete project planning and execution framework: 14 planning sections plus 9 specialized execution capabilities, from initial vision through deployment and continuous improvement. |
 | `npx skills add https://github.com/justinedevs/collection --skill erc8004-agent-creator` | [justinedevs/collection/erc8004-agent-creator](https://skills.sh/justinedevs/collection/erc8004-agent-creator) | Usage and installation for [create-8004-agent](https://github.com/Eversmile12/create-8004-agent): how to create ERC-8004/8004 agents, wizard options, chains (EVM and Solana), and post-generation steps. Optional script to switch generated project to Anthropic Claude. |
+| `npx skills add https://github.com/justinedevs/collection --skill core-engineering` | [justinedevs/collection/core-engineering](https://skills.sh/justinedevs/collection/core-engineering) | Core Engineering: OOP four pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), SOLID, composition over inheritance, DRY/KISS/YAGNI/Law of Demeter, and association/aggregation/composition with example code. |
 
 Each skill is installed independently - you only download what you need.
 
@@ -23,6 +24,7 @@ This repository uses a monorepo structure where multiple skills can coexist. Whe
 
 - **BlueprintKit:** After installing, ask your agent: *"Create a project plan using BlueprintKit: scope, timeline, and risk section"* or *"Run the tech-stack selector and suggest a stack for a real-time dashboard."*
 - **erc8004-agent-creator:** After installing, ask: *"How do I create an ERC-8004 agent?"* or *"What options does the create-8004-agent wizard have?"* or *"How do I register my agent and start the A2A server?"* The skill explains installation (`npx create-8004-agent`), wizard options, chains, and usage after generation.
+- **core-engineering:** After installing, ask: *"Explain SOLID with code examples"* or *"What is the difference between aggregation and composition?"* or *"Refactor this to follow Single Responsibility."* The skill provides OOP, SOLID, clean code, and relationship types with TypeScript snippets.
 
 **Result URL:** `https://skills.sh/justinedevs/collection/`
 
