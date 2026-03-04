@@ -57,6 +57,10 @@ collection/
 │   ├── SKILL.md                         # OOP, SOLID, clean code, relationship types + examples
 │   └── .claude-plugin/
 │       └── marketplace.json             # Claude marketplace listing
+├── context-engineering/                 # Context Engineering / prompt structure skill
+│   ├── SKILL.md                         # Skeleton-of-Thought, diffs, XML tags, symbolic rules, constraints
+│   └── .claude-plugin/
+│       └── marketplace.json             # Claude marketplace listing
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
 └── STRUCTURE.md                        # This file
