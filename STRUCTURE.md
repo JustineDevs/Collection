@@ -61,6 +61,13 @@ collection/
 │   ├── SKILL.md                         # Skeleton-of-Thought, diffs, XML tags, symbolic rules, constraints
 │   └── .claude-plugin/
 │       └── marketplace.json             # Claude marketplace listing
+├── co-star-ui/                          # CO STAR UI Creator skill
+│   ├── SKILL.md                         # Decision logic (UI build vs prompt creator), flow, pre-actions
+│   ├── references/
+│   │   ├── co-star-prompt.md            # Modern React UI (registries, shadcn, Magic UI, etc.)
+│   │   └── co-star-creator.md           # Newsprint UI Creator (design system integration)
+│   └── .claude-plugin/
+│       └── marketplace.json             # Claude marketplace listing
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
 └── STRUCTURE.md                        # This file
