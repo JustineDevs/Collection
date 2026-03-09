@@ -1,6 +1,6 @@
 ---
 name: co-star-ui
-description: CO-STAR UI Creator for React/Next.js: structured prompting to build or integrate UI (components, pages, design systems) or to create custom CO-STAR prompts. Use when the user wants to add hero sections, dashboards, design tokens, shadcn/Magic UI/Aceternity integration, Newsprint design system, or to draft their own CO-STAR prompt (Context, Objective, Style, Tone, Audience, Response). Always run discovery questions first, then plan, then implementation.
+description: "CO-STAR UI Creator for React/Next.js: structured prompting to build or integrate UI (components, pages, design systems) or to create custom CO-STAR prompts. Use when the user wants to add hero sections, dashboards, design tokens, shadcn/Magic UI/Aceternity integration, Newsprint design system, or to draft their own CO-STAR prompt (Context, Objective, Style, Tone, Audience, Response). Always run discovery questions first, then plan, then implementation."
 license: See repository LICENSE
 ---
 
