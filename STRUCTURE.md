@@ -68,8 +68,20 @@ collection/
 │   │   └── co-star-creator.md           # Newsprint UI Creator (design system integration)
 │   └── .claude-plugin/
 │       └── marketplace.json             # Claude marketplace listing
+├── agent-hub/                           # Orchestration knowledge hub (docs + skill entry)
+│   ├── README.md
+│   ├── COMMANDS.md                      # Paste-into-chat: AI wires .cursor/commands launchers
+│   ├── SKILL.md                         # Canonical machine-readable orchestration entry
+│   ├── architecture/                    # 00-scope … 10-observability (layered canon)
+│   ├── indexes/                         # command-index, service-index, orchestration-map, glossary
+│   ├── diagrams/                        # Text / Mermaid flow docs
+│   ├── templates/                       # Inspection and sequence scaffolds
+│   ├── commands/                        # Project-native command specs
+│   ├── agent/                           # Operating model and editing rules for agents
+│   └── .claude-plugin/                  # Plugin metadata for compatible hosts
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
+├── CONTRIBUTING.md                     # How to add skills and maintain agent-hub
 └── STRUCTURE.md                        # This file
 
 # Future Skills Structure
