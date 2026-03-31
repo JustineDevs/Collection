@@ -1,0 +1,19 @@
+{
+  "name": "agent-hub",
+  "owner": {
+    "name": "JustineDevs",
+    "email": "tradergofficial@gmail.com"
+  },
+  "metadata": {
+    "description": "Orchestration control-plane skill: layered architecture (intent through release), indexes, diagrams, templates, command specs, agent operating rules, and subagent routing. For orchestration reviews, boundary work, memory and recovery design, and permission-sensitive refactors in agent-augmented repos.",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "agent-hub",
+      "source": ".",
+      "description": "agent-hub: documentation-driven orchestration for LLMs—architecture layers 00–10, orchestration map, command workflows, editing guardrails, MCP/tool boundary guidance, memory pipelines, recovery, observability, and human gates. Use when the task needs structured navigation of intent, policy, context, planning, routing, delegation, execution, verification, memory, or release awareness—not for a single domain-only skill.",
+      "category": "Orchestration"
+    }
+  ]
+}
