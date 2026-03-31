@@ -11,6 +11,7 @@ A collection of AI agent skills for project development and execution.
 | `npx skills add https://github.com/justinedevs/collection --skill core-engineering` | [justinedevs/collection/core-engineering](https://skills.sh/justinedevs/collection/core-engineering) | Core Engineering: OOP four pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), SOLID, composition over inheritance, DRY/KISS/YAGNI/Law of Demeter, and association/aggregation/composition with example code. |
 | `npx skills add https://github.com/justinedevs/collection --skill context-engineering` | [justinedevs/collection/context-engineering](https://skills.sh/justinedevs/collection/context-engineering) | Context Engineering: Skeleton-of-Thought, token-efficient diff updates, XML tagging, symbolic rule variables, and negative constraints, plus guidance on LLMBundle-style context packaging. |
 | `npx skills add https://github.com/justinedevs/collection --skill co-star-ui` | [justinedevs/collection/co-star-ui](https://skills.sh/justinedevs/collection/co-star-ui) | CO STAR UI: structured CO-STAR prompting for building/integrating React UI (shadcn, Magic UI, Aceternity, Newsprint) or creating custom CO-STAR prompts; discovery first, then plan and implementation. |
+| `npx skills add https://github.com/justinedevs/collection --skill agent-hub` | [justinedevs/collection/agent-hub](https://skills.sh/justinedevs/collection/agent-hub) | **agent-hub:** orchestration canon for the monorepo (architecture layers 00–10, indexes, diagrams, templates, command specs, agent operating rules). Machine entry: `agent-hub/SKILL.md`. |
 
 Each skill is installed independently - you only download what you need.
 
@@ -36,6 +37,10 @@ This repository uses a monorepo structure where multiple skills can coexist. Whe
 
 This is a monorepo containing multiple skills. Each skill can be installed independently. For the full file tree and directory layout, see [STRUCTURE.md](./STRUCTURE.md).
 
+## Contributing
+
+See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for how to contribute to **any** skill, keep collection docs (**README**, **STRUCTURE**) accurate, and use optional workspace tooling (**version/**, **.cursor/**) in line with this repo.
+
 ## Adding New Skills
 
 To add a new skill to this collection:
@@ -45,6 +50,7 @@ To add a new skill to this collection:
 3. Add `README.md` with skill documentation
 4. Add skill content in `.claude/skills/[skill-name]/` if needed
 5. Update this README.md: add a row to the Installation Collection table
+6. Update [STRUCTURE.md](./STRUCTURE.md) and follow [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
