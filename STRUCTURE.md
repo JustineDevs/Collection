@@ -79,6 +79,39 @@ collection/
 │   ├── commands/                        # Project-native command specs
 │   ├── agent/                           # Operating model and editing rules for agents
 │   └── .claude-plugin/                  # Plugin metadata for compatible hosts
+├── startup/                             # Curated startup operating system bundle
+│   ├── SKILL.md                         # Root skill definition (for skills.sh)
+│   ├── README.md                        # Skill-specific documentation
+│   ├── .claude/
+│   │   └── skills/
+│   │       └── startup/
+│   │           ├── SKILL.md             # Bundle entrypoint and module routing guide
+│   │           ├── LICENSE.txt
+│   │           ├── startup-manager/
+│   │           │   └── SKILL.md
+│   │           ├── founder-foundation/
+│   │           │   └── SKILL.md
+│   │           ├── value-validation/
+│   │           │   └── SKILL.md
+│   │           ├── mvp-engine/
+│   │           │   └── SKILL.md
+│   │           ├── fundraising-kit/
+│   │           │   └── SKILL.md
+│   │           ├── gtm-launch/
+│   │           │   └── SKILL.md
+│   │           ├── growth-engine/
+│   │           │   └── SKILL.md
+│   │           └── founder-ops/
+│   │               └── SKILL.md
+│   └── .claude-plugin/
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
+│       └── marketplace.json             # Claude marketplace listing
 ├── LICENSE                             # Collection license (MIT)
 ├── README.md                           # Collection overview
 ├── CONTRIBUTING.md                     # How to add skills and maintain agent-hub
@@ -108,6 +141,7 @@ collection/
 When users install skills, they use:
 - `npx skills add justinedevs/collection/blueprintkit` → Downloads only `blueprintkit/` directory
 - `npx skills add justinedevs/collection/playbook` → Downloads only `playbook/` directory (when added)
+- `npx skills add justinedevs/collection/startup` → Downloads only `startup/` directory
 
 ## Key Points
 
@@ -116,4 +150,3 @@ When users install skills, they use:
 3. **Skill directories** contain SKILL.md, README.md, and all skill-specific content
 4. **Selective installation** - users only download the skill directory they need
 5. **Easy to extend** - just add new skill directories following the same pattern
-
