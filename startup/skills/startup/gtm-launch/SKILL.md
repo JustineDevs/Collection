@@ -1,6 +1,6 @@
 ---
 name: gtm-launch
-description: "Plan, coordinate, and iterate startup go-to-market launches using real adoption and retention evidence. Use when Codex needs to organize launch phases, coordinate channels and assets, define launch metrics, or drive toward repeatable go-to-market and early product-market-fit signals."
+description: "Plan, coordinate, and iterate startup go-to-market launches using real adoption and retention evidence. Use when the agent needs to organize launch phases, coordinate channels and assets, define launch metrics, or drive toward repeatable go-to-market and early product-market-fit signals."
 ---
 
 # GTM Launch
