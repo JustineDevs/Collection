@@ -82,9 +82,8 @@ collection/
 ├── startup/                             # Curated startup operating system bundle
 │   ├── SKILL.md                         # Root skill definition (for skills.sh)
 │   ├── README.md                        # Skill-specific documentation
-│   ├── .claude/
-│   │   └── skills/
-│   │       └── startup/
+│   ├── skills/
+│   │   └── startup/
 │   │           ├── SKILL.md             # Bundle entrypoint and module routing guide
 │   │           ├── LICENSE.txt
 │   │           ├── startup-manager/
