@@ -1,6 +1,6 @@
 ---
 name: mvp-engine
-description: "Scope, sequence, and verify an MVP with founder constraints, market evidence, and shipping gates. Use when Codex needs to define the smallest useful product, turn validation insights into build loops, manage iterative MVP delivery, or decide whether a feature is ready to ship."
+description: "Scope, sequence, and verify an MVP with founder constraints, market evidence, and shipping gates. Use when the agent needs to define the smallest useful product, turn validation insights into build loops, manage iterative MVP delivery, or decide whether a feature is ready to ship."
 ---
 
 # MVP Engine
