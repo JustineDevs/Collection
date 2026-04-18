@@ -1,20 +1,35 @@
 # JustineDevs Skills Collection
 
-A collection of AI agent skills for project development and execution.
+A collection of AI agent skills for project development and execution across Codex, Claude, Composer, and similar agent runtimes.
 
 ## Installation Collection
 
-| Bash | Skills (URL) | Description |
-|------|--------------|-------------|
-| `npx skills add https://github.com/justinedevs/collection --skill blueprintkit` | [justinedevs/collection/blueprintkit](https://skills.sh/justinedevs/collection/blueprintkit) | Complete project planning and execution framework: 14 planning sections plus 9 specialized execution capabilities, from initial vision through deployment and continuous improvement. |
-| `npx skills add https://github.com/justinedevs/collection --skill erc8004-agent-creator` | [justinedevs/collection/erc8004-agent-creator](https://skills.sh/justinedevs/collection/erc8004-agent-creator) | Usage and installation for [create-8004-agent](https://github.com/Eversmile12/create-8004-agent): how to create ERC-8004/8004 agents, wizard options, chains (EVM and Solana), and post-generation steps. Optional script to switch generated project to Anthropic Claude. |
-| `npx skills add https://github.com/justinedevs/collection --skill core-engineering` | [justinedevs/collection/core-engineering](https://skills.sh/justinedevs/collection/core-engineering) | Core Engineering: OOP four pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), SOLID, composition over inheritance, DRY/KISS/YAGNI/Law of Demeter, and association/aggregation/composition with example code. |
-| `npx skills add https://github.com/justinedevs/collection --skill context-engineering` | [justinedevs/collection/context-engineering](https://skills.sh/justinedevs/collection/context-engineering) | Context Engineering: Skeleton-of-Thought, token-efficient diff updates, XML tagging, symbolic rule variables, and negative constraints, plus guidance on LLMBundle-style context packaging. |
-| `npx skills add https://github.com/justinedevs/collection --skill co-star-ui` | [justinedevs/collection/co-star-ui](https://skills.sh/justinedevs/collection/co-star-ui) | CO STAR UI: structured CO-STAR prompting for building/integrating React UI (shadcn, Magic UI, Aceternity, Newsprint) or creating custom CO-STAR prompts; discovery first, then plan and implementation. |
-| `npx skills add https://github.com/justinedevs/collection --skill agent-hub` | [justinedevs/collection/agent-hub](https://skills.sh/justinedevs/collection/agent-hub) | **agent-hub:** orchestration canon for the monorepo (architecture layers 00–10, indexes, diagrams, templates, command specs, agent operating rules). Machine entry: `agent-hub/SKILL.md`. |
-| `npx skills add https://github.com/justinedevs/collection --skill startup` | [justinedevs/collection/startup](https://skills.sh/justinedevs/collection/startup) | Curated startup operating system bundle with startup-manager for request routing across founder thesis, validation, MVP scoping, fundraising, launch, growth, and founder ops. |
+| Install | Skills (URL) | Category | Codex | Purpose | Demo Prompt |
+|------|--------------|----------|-------|---------|-------------|
+| `npx skills add https://github.com/justinedevs/collection --skill blueprintkit` | [justinedevs/collection/blueprintkit](https://skills.sh/justinedevs/collection/blueprintkit) | Planning | Yes | Complete project planning and execution framework: 14 planning sections plus 9 specialized execution capabilities, from initial vision through deployment and continuous improvement. | `Create a project plan using BlueprintKit: scope, timeline, risk section, and recommended execution workflow.` |
+| `npx skills add https://github.com/justinedevs/collection --skill erc8004-agent-creator` | [justinedevs/collection/erc8004-agent-creator](https://skills.sh/justinedevs/collection/erc8004-agent-creator) | Agents | Yes | Usage and installation for [create-8004-agent](https://github.com/Eversmile12/create-8004-agent): how to create ERC-8004/8004 agents, wizard options, chains (EVM and Solana), and post-generation steps. Optional script to switch generated project to Anthropic Claude. | `How do I create an ERC-8004 agent, what wizard options matter, and how do I register and run it after generation?` |
+| `npx skills add https://github.com/justinedevs/collection --skill core-engineering` | [justinedevs/collection/core-engineering](https://skills.sh/justinedevs/collection/core-engineering) | Engineering | Yes | Core Engineering: OOP four pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), SOLID, composition over inheritance, DRY/KISS/YAGNI/Law of Demeter, and association/aggregation/composition with example code. | `Explain SOLID with code examples, then refactor this class to follow Single Responsibility.` |
+| `npx skills add https://github.com/justinedevs/collection --skill context-engineering` | [justinedevs/collection/context-engineering](https://skills.sh/justinedevs/collection/context-engineering) | Prompting | Yes | Context Engineering: Skeleton-of-Thought, token-efficient diff updates, XML tagging, symbolic rule variables, and negative constraints, plus guidance on LLMBundle-style context packaging. | `Show me a Skeleton-of-Thought outline for this repo and give me SEARCH/REPLACE diffs only for the changed function.` |
+| `npx skills add https://github.com/justinedevs/collection --skill co-star-ui` | [justinedevs/collection/co-star-ui](https://skills.sh/justinedevs/collection/co-star-ui) | UI | Yes | CO STAR UI: structured CO-STAR prompting for building/integrating React UI (shadcn, Magic UI, Aceternity, Newsprint) or creating custom CO-STAR prompts; discovery first, then plan and implementation. | `Add a hero section using CO STAR and help me integrate the Newsprint design system into this React app.` |
+| `npx skills add https://github.com/justinedevs/collection --skill agent-hub` | [justinedevs/collection/agent-hub](https://skills.sh/justinedevs/collection/agent-hub) | Orchestration | Yes | **agent-hub:** orchestration canon for the monorepo (architecture layers 00–10, indexes, diagrams, templates, command specs, agent operating rules). Machine entry: `agent-hub/SKILL.md`. | `Use agent-hub to decide the correct orchestration path, architecture layer, and command flow for this repo task.` |
+| `npx skills add https://github.com/justinedevs/collection --skill startup` | [justinedevs/collection/startup](https://skills.sh/justinedevs/collection/startup) | Startup | Yes | Curated startup operating system bundle with startup-manager for request routing across founder thesis, validation, MVP scoping, fundraising, launch, growth, and founder ops. | `Pick the one practical startup module I should use for this request, then help me validate the idea or scope the next blocking step.` |
 
 Each skill is installed independently - you only download what you need.
+
+`Category` groups similar skills. `Codex = Yes` means the published package includes a runtime skill folder that can be installed into `~/.codex/skills/`.
+
+## Codex
+
+Codex can use these published skills too. After downloading or copying a skill package, place the runtime skill folder into `~/.codex/skills/<skill-name>/`.
+
+Example for the `startup` bundle:
+
+```bash
+mkdir -p ~/.codex/skills/startup
+cp -R startup/skills/startup/. ~/.codex/skills/startup/
+```
+
+The same idea applies to other agent runtimes: install the published package, then place the runtime-specific skill folder where that host discovers skills.
 
 ## How Monorepo Installation Works
 
@@ -24,14 +39,7 @@ This repository uses a monorepo structure where multiple skills can coexist. Whe
 - **Independent Installation**: Each skill can be installed/updated/removed separately
 - **Shared Resources**: Skills can share common documentation or utilities at the collection level
 
-**Example usage in your workspace (prompts):**
-
-- **BlueprintKit:** After installing, ask your agent: *"Create a project plan using BlueprintKit: scope, timeline, and risk section"* or *"Run the tech-stack selector and suggest a stack for a real-time dashboard."*
-- **erc8004-agent-creator:** After installing, ask: *"How do I create an ERC-8004 agent?"* or *"What options does the create-8004-agent wizard have?"* or *"How do I register my agent and start the A2A server?"* The skill explains installation (`npx create-8004-agent`), wizard options, chains, and usage after generation.
-- **core-engineering:** After installing, ask: *"Explain SOLID with code examples"* or *"What is the difference between aggregation and composition?"* or *"Refactor this to follow Single Responsibility."* The skill provides OOP, SOLID, clean code, and relationship types with TypeScript snippets.
-- **context-engineering:** After installing, ask: *"Show me a Skeleton-of-Thought skeleton for this file,"* or *"Give me SEARCH/REPLACE diffs only for this function,"* or *"Wrap my repo into XML tags and define reusable [RULE_*] blocks."* The skill guides you to structure prompts with SoT, diffs, XML, symbolic rules, and negative constraints (and optionally how to apply llmbundle output).
-- **co-star-ui:** After installing, ask: *"Add a hero section using CO STAR"* or *"Help me integrate the Newsprint design system"* or *"I want to create my own CO-STAR prompt for our product."* The skill runs discovery questions first, then an integration plan and code (or guides you through creating a custom CO-STAR prompt).
-- **startup:** After installing, ask: *"Pick the one practical startup module I should use for this request"* or *"Help me decide whether I should start this company"* or *"Scope the smallest MVP that can test this assumption."* The bundle includes startup-manager, founder-foundation, value-validation, mvp-engine, fundraising-kit, gtm-launch, growth-engine, and founder-ops.
+The Installation Collection table above includes a demo prompt for each skill so users can quickly understand the real use case and expected workflow.
 
 **Result URL:** `https://skills.sh/justinedevs/collection/`
 
