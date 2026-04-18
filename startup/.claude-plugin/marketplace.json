@@ -1,0 +1,19 @@
+{
+  "name": "startup",
+  "owner": {
+    "name": "JustineDevs",
+    "email": "tradergofficial@gmail.com"
+  },
+  "metadata": {
+    "description": "Curated startup operating system bundle: founder thesis, validation, MVP scoping, fundraising, launch, growth, and founder ops in one install.",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "startup",
+      "source": ".",
+      "description": "Single bundled startup skill with founder-foundation, value-validation, mvp-engine, fundraising-kit, gtm-launch, growth-engine, and founder-ops.",
+      "category": "Business Strategy"
+    }
+  ]
+}
