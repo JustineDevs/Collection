@@ -1,6 +1,6 @@
 # Startup Skill
 
-Curated startup operating system for founders, packaged as a single installable bundle.
+Curated startup operating system for founders, packaged as a single installable bundle for Codex, Claude, Composer, and similar agent runtimes.
 
 ## Installation
 
@@ -12,14 +12,14 @@ npx skills add justinedevs/collection/startup
 
 When you install `startup`, these founder modules are installed together:
 
-- `.claude/skills/startup/startup-manager/` - routes requests to the right startup module
-- `.claude/skills/startup/founder-foundation/` - founder thesis, role map, kill criteria
-- `.claude/skills/startup/value-validation/` - market evidence, model comparison, validation plan
-- `.claude/skills/startup/mvp-engine/` - MVP scoping, release slicing, ship checks
-- `.claude/skills/startup/fundraising-kit/` - investor narrative, proof inventory, diligence gaps
-- `.claude/skills/startup/gtm-launch/` - launch brief, channels, metric tree
-- `.claude/skills/startup/growth-engine/` - growth experiments, bottlenecks, scale decisions
-- `.claude/skills/startup/founder-ops/` - equity, governance, compliance, legal review gates
+- `skills/startup/startup-manager/` - routes requests to the right startup module
+- `skills/startup/founder-foundation/` - founder thesis, role map, kill criteria
+- `skills/startup/value-validation/` - market evidence, model comparison, validation plan
+- `skills/startup/mvp-engine/` - MVP scoping, release slicing, ship checks
+- `skills/startup/fundraising-kit/` - investor narrative, proof inventory, diligence gaps
+- `skills/startup/gtm-launch/` - launch brief, channels, metric tree
+- `skills/startup/growth-engine/` - growth experiments, bottlenecks, scale decisions
+- `skills/startup/founder-ops/` - equity, governance, compliance, legal review gates
 
 ## Suggested Prompts
 
@@ -34,12 +34,12 @@ When you install `startup`, these founder modules are installed together:
 
 ## Documentation
 
-- [Bundle Entry](.claude/skills/startup/SKILL.md)
-- [Startup Manager](.claude/skills/startup/startup-manager/SKILL.md)
-- [Founder Foundation](.claude/skills/startup/founder-foundation/SKILL.md)
-- [Value Validation](.claude/skills/startup/value-validation/SKILL.md)
-- [MVP Engine](.claude/skills/startup/mvp-engine/SKILL.md)
-- [Fundraising Kit](.claude/skills/startup/fundraising-kit/SKILL.md)
-- [GTM Launch](.claude/skills/startup/gtm-launch/SKILL.md)
-- [Growth Engine](.claude/skills/startup/growth-engine/SKILL.md)
-- [Founder Ops](.claude/skills/startup/founder-ops/SKILL.md)
+- [Bundle Entry](skills/startup/SKILL.md)
+- [Startup Manager](skills/startup/startup-manager/SKILL.md)
+- [Founder Foundation](skills/startup/founder-foundation/SKILL.md)
+- [Value Validation](skills/startup/value-validation/SKILL.md)
+- [MVP Engine](skills/startup/mvp-engine/SKILL.md)
+- [Fundraising Kit](skills/startup/fundraising-kit/SKILL.md)
+- [GTM Launch](skills/startup/gtm-launch/SKILL.md)
+- [Growth Engine](skills/startup/growth-engine/SKILL.md)
+- [Founder Ops](skills/startup/founder-ops/SKILL.md)
