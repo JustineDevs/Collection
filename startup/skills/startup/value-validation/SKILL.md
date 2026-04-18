@@ -1,6 +1,6 @@
 ---
 name: value-validation
-description: "Validate startup value propositions, market demand, customer pain, and business-model options with explicit evidence and invalidation logic. Use when Codex needs to assess problem-solution fit, compare business models, synthesize user and market evidence, or plan validation experiments before building or fundraising."
+description: "Validate startup value propositions, market demand, customer pain, and business-model options with explicit evidence and invalidation logic. Use when the agent needs to assess problem-solution fit, compare business models, synthesize user and market evidence, or plan validation experiments before building or fundraising."
 ---
 
 # Value Validation
