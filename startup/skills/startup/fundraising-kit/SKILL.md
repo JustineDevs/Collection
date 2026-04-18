@@ -1,6 +1,6 @@
 ---
 name: fundraising-kit
-description: "Assemble an evidence-backed fundraising narrative, deck structure, financial story, and diligence materials. Use when Codex needs to prepare investor-facing materials, pressure-test market-sizing and projection claims, or package a startup into a credible fundraising kit."
+description: "Assemble an evidence-backed fundraising narrative, deck structure, financial story, and diligence materials. Use when the agent needs to prepare investor-facing materials, pressure-test market-sizing and projection claims, or package a startup into a credible fundraising kit."
 ---
 
 # Fundraising Kit
