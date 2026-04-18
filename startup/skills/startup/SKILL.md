@@ -10,7 +10,7 @@ Curated founder operating system for validating, building, launching, funding, a
 
 ## Included Modules
 
-When this skill is installed, all of these module folders are available under `.claude/skills/startup/`:
+When this skill is installed, all of these module folders are available under `skills/startup/`:
 
 - `startup-manager/` - request triage, module routing, and practical handoff logic
 - `founder-foundation/` - founder thesis, founder-market fit, role map, kill criteria
@@ -61,12 +61,12 @@ For mixed requests:
 
 ## File Map
 
-- `.claude/skills/startup/SKILL.md` - this bundle entrypoint
-- `.claude/skills/startup/startup-manager/SKILL.md`
-- `.claude/skills/startup/founder-foundation/SKILL.md`
-- `.claude/skills/startup/value-validation/SKILL.md`
-- `.claude/skills/startup/mvp-engine/SKILL.md`
-- `.claude/skills/startup/fundraising-kit/SKILL.md`
-- `.claude/skills/startup/gtm-launch/SKILL.md`
-- `.claude/skills/startup/growth-engine/SKILL.md`
-- `.claude/skills/startup/founder-ops/SKILL.md`
+- `skills/startup/SKILL.md` - this bundle entrypoint
+- `skills/startup/startup-manager/SKILL.md`
+- `skills/startup/founder-foundation/SKILL.md`
+- `skills/startup/value-validation/SKILL.md`
+- `skills/startup/mvp-engine/SKILL.md`
+- `skills/startup/fundraising-kit/SKILL.md`
+- `skills/startup/gtm-launch/SKILL.md`
+- `skills/startup/growth-engine/SKILL.md`
+- `skills/startup/founder-ops/SKILL.md`
