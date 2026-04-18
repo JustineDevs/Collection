@@ -1,6 +1,6 @@
 ---
 name: founder-ops
-description: "Handle founder operations across legal, equity, governance, and compliance with explicit review gates. Use when Codex needs to draft or organize operating documents, pressure-test cap table and equity decisions, track compliance obligations, or prepare founder operations for diligence and scale."
+description: "Handle founder operations across legal, equity, governance, and compliance with explicit review gates. Use when the agent needs to draft or organize operating documents, pressure-test cap table and equity decisions, track compliance obligations, or prepare founder operations for diligence and scale."
 ---
 
 # Founder Ops
