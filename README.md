@@ -12,6 +12,7 @@ A collection of AI agent skills for project development and execution.
 | `npx skills add https://github.com/justinedevs/collection --skill context-engineering` | [justinedevs/collection/context-engineering](https://skills.sh/justinedevs/collection/context-engineering) | Context Engineering: Skeleton-of-Thought, token-efficient diff updates, XML tagging, symbolic rule variables, and negative constraints, plus guidance on LLMBundle-style context packaging. |
 | `npx skills add https://github.com/justinedevs/collection --skill co-star-ui` | [justinedevs/collection/co-star-ui](https://skills.sh/justinedevs/collection/co-star-ui) | CO STAR UI: structured CO-STAR prompting for building/integrating React UI (shadcn, Magic UI, Aceternity, Newsprint) or creating custom CO-STAR prompts; discovery first, then plan and implementation. |
 | `npx skills add https://github.com/justinedevs/collection --skill agent-hub` | [justinedevs/collection/agent-hub](https://skills.sh/justinedevs/collection/agent-hub) | **agent-hub:** orchestration canon for the monorepo (architecture layers 00–10, indexes, diagrams, templates, command specs, agent operating rules). Machine entry: `agent-hub/SKILL.md`. |
+| `npx skills add https://github.com/justinedevs/collection --skill startup` | [justinedevs/collection/startup](https://skills.sh/justinedevs/collection/startup) | Curated startup operating system bundle with startup-manager for request routing across founder thesis, validation, MVP scoping, fundraising, launch, growth, and founder ops. |
 
 Each skill is installed independently - you only download what you need.
 
@@ -30,6 +31,7 @@ This repository uses a monorepo structure where multiple skills can coexist. Whe
 - **core-engineering:** After installing, ask: *"Explain SOLID with code examples"* or *"What is the difference between aggregation and composition?"* or *"Refactor this to follow Single Responsibility."* The skill provides OOP, SOLID, clean code, and relationship types with TypeScript snippets.
 - **context-engineering:** After installing, ask: *"Show me a Skeleton-of-Thought skeleton for this file,"* or *"Give me SEARCH/REPLACE diffs only for this function,"* or *"Wrap my repo into XML tags and define reusable [RULE_*] blocks."* The skill guides you to structure prompts with SoT, diffs, XML, symbolic rules, and negative constraints (and optionally how to apply llmbundle output).
 - **co-star-ui:** After installing, ask: *"Add a hero section using CO STAR"* or *"Help me integrate the Newsprint design system"* or *"I want to create my own CO-STAR prompt for our product."* The skill runs discovery questions first, then an integration plan and code (or guides you through creating a custom CO-STAR prompt).
+- **startup:** After installing, ask: *"Pick the one practical startup module I should use for this request"* or *"Help me decide whether I should start this company"* or *"Scope the smallest MVP that can test this assumption."* The bundle includes startup-manager, founder-foundation, value-validation, mvp-engine, fundraising-kit, gtm-launch, growth-engine, and founder-ops.
 
 **Result URL:** `https://skills.sh/justinedevs/collection/`
 
