@@ -1,6 +1,6 @@
 ---
 name: founder-foundation
-description: "Clarify founder purpose, founder-market fit, role ownership, and an evidence-backed founder thesis. Use when Codex needs to pressure-test why this founder should pursue this startup, define roles and learning loops, or produce a grounded founder foundation before market validation, MVP work, fundraising, or operations planning."
+description: "Clarify founder purpose, founder-market fit, role ownership, and an evidence-backed founder thesis. Use when the agent needs to pressure-test why this founder should pursue this startup, define roles and learning loops, or produce a grounded founder foundation before market validation, MVP work, fundraising, or operations planning."
 ---
 
 # Founder's Foundation
