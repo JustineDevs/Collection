@@ -1,6 +1,6 @@
 ---
 name: growth-engine
-description: "Design, run, and interpret growth experiments with funnel evidence and scale discipline. Use when Codex needs to identify a growth bottleneck, prioritize experiments, analyze conversion movement, or decide whether a startup has earned the right to scale a channel or tactic."
+description: "Design, run, and interpret growth experiments with funnel evidence and scale discipline. Use when the agent needs to identify a growth bottleneck, prioritize experiments, analyze conversion movement, or decide whether a startup has earned the right to scale a channel or tactic."
 ---
 
 # Growth Engine
