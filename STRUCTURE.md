@@ -79,6 +79,13 @@ collection/
 │   ├── commands/                        # Project-native command specs
 │   ├── agent/                           # Operating model and editing rules for agents
 │   └── .claude-plugin/                  # Plugin metadata for compatible hosts
+├── webmcp-agents/                       # Unified WebMCP agent skill bundle
+│   ├── SKILL.md                         # Public bundle entrypoint
+│   ├── README.md                        # Bundle installation and authority
+│   ├── skills/                          # Eleven specialized WebMCP skills
+│   ├── docs/                            # WebMCP explainers and proposals
+│   ├── index.bs                         # Normative WebMCP source
+│   └── scripts/                          # Bundle validation helper
 ├── startup/                             # Curated startup operating system bundle
 │   ├── SKILL.md                         # Root skill definition (for skills.sh)
 │   ├── README.md                        # Skill-specific documentation
